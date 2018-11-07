@@ -21,3 +21,24 @@ def bubble(lst):
             x= x + 1
         y = y + 1 
 #%%
+        
+def merge(a, b):
+    new_list = []
+
+    while len(a) > 0 and len(b) > 0:
+        if a[0] < b[0]:
+            new_list.append(a[0])
+            a.pop(0) 
+        else:
+            new_list.append(b[0])
+            b.pop(0)
+    
+    if len(a) == 0:
+        new_list += b
+    else:
+        new_list += a 
+    
+    
+    
+    return new_list 
+#%%
